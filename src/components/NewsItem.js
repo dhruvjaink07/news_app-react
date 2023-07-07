@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-
+import {
+    BrowserRouter,
+    Route,
+    Routes
+  } from "react-router-dom";
 export class NewsItem extends Component {
 
 
@@ -9,7 +13,7 @@ export class NewsItem extends Component {
         return (
             <>
             <div className='my-3'>
-                <div className="card" style={{ width: "18rem" }}>
+                <div className="card">
                     <img src={!imageUrl?"https://www.cartoq.com/wp-content/uploads/2023/07/skoda-kushaq-matte-featured.jpg":imageUrl} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{title}...</h5>
