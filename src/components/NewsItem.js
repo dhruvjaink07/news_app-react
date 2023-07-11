@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class NewsItem extends Component {
-    render() {
-        let { title, description, imageUrl, newsUrl, author, date, source } = this.props;
+const NewsItem = (props) => {
+        let { title, description, imageUrl, newsUrl, author, date, source } = props;
         return (
             <>
                 <div className='my-3'>
                     <div className="card">
-                        <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{ left: "90%", zIndex: '1' }}>
+                        <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{ left: "85%", zIndex: '1' }}>
                             <small>{source}</small>
                             <span className="visually-hidden">unread messages</span></span>
                         <img src={!imageUrl ? "https://www.cartoq.com/wp-content/uploads/2023/07/skoda-kushaq-matte-featured.jpg" : imageUrl} className="card-img-top" alt="..." />
@@ -22,6 +21,6 @@ export class NewsItem extends Component {
             </>
         )
     }
-}
+
 
 export default NewsItem
